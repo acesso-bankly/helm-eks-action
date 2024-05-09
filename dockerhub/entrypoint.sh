@@ -17,9 +17,12 @@ then
     done
 fi
 
-echo "running entrypoint with command(s):"
+echo "running entrypoint with command(s): $INPUT_COMMAND"
 
 response=$(sh -c "$INPUT_COMMAND")
+
+echo "result:$?"
+echo "response:$response"
 
 {
   echo "response<<EOF"
