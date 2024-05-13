@@ -2,4 +2,4 @@
 # please open a PR for the `dockerhub/Dockerfile` in the same project.
 #FROM koslib/ga-helm-eks:2.5
 #FROM digonill/dgnll-helm-eks:latest 
-FROM digonill/dgnll-helm-eks:1.0.1
+FROM digonill/dgnll-helm-eks:1.0.2

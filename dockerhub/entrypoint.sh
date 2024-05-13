@@ -19,13 +19,16 @@ fi
 
 echo "running entrypoint with command(s): $INPUT_COMMAND"
 
-response=$(sh -c "$INPUT_COMMAND")
-
-echo "result:$?"
-echo "response:$response"
-
+if (sh -c "$INPUT_COMMAND") ; then
 {
   echo "response<<EOF"
-  echo "$response"
+  echo "deployed successfully"
   echo "EOF"
-} >> "$GITHUB_OUTPUT"
+} >> "$GITHUB_OUTPUT"    
+else
+{
+  echo "response<<EOF"
+  echo "deployment failed with error verify the logs for more details."
+  echo "EOF"
+} >> "$GITHUB_OUTPUT"    
+fi
