@@ -2,7 +2,10 @@ name: Dockerhub Build
 
 on:
   workflow_dispatch:
-
+    # inputs:
+    #   tag:
+    #     type: string
+    #     required: false
 
 jobs:
   docker:
