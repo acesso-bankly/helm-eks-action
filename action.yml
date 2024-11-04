@@ -15,10 +15,6 @@ outputs:
     description: "Output returned by your Helm or kubectl command"
 runs:
   using: "docker"
-  container:
-    image: ghcr.io/acesso-bankly/helm-eks-action:feature-docker
-    credentials:
-      username: ${{ github.actor }}
-      password: ${{ secrets.github_token }}
+  image: "Dockerfile"
   args:
     - ${{ inputs.command }}
