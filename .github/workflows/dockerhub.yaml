@@ -12,6 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     env:
       DOCKERHUB_USERNAME: ${{ vars.DOCKER_USERNAME }}
+    permissions:
+      packages: write
+      contents: read
+      
     steps:
       # - name: Checkout
       #   uses: actions/checkout@v4
